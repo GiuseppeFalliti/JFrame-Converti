@@ -12,6 +12,7 @@ public class Frame extends JFrame {
         setTitle("Converti");
         setSize(new Dimension(250, 200));
         setDefaultCloseOperation(EXIT_ON_CLOSE);
+        setResizable(false);
 
         cp = getContentPane();
        
@@ -43,6 +44,9 @@ public class Frame extends JFrame {
                     double yards = numero / 1.60934;
                     JOptionPane.showMessageDialog(this, yards);
 
+                }
+                if (!opz1.isSelected() && !opz2.isSelected()) {
+                    JOptionPane.showMessageDialog(this,"scegliere un opzione");                    
                 }
 
             } catch (NumberFormatException e_num) {
